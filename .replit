@@ -1,2 +1,2 @@
-language = "bash"
-run = ""
+language = "HTML, CSS, JS"
+run = "npx static-here"
