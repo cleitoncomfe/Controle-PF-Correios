@@ -17,7 +17,74 @@
       <ul class="nav justify-content-end">
         <li class="nav-item">
           <a class="nav-link active" href="../pages/registrar.html">Registrar </a>
+ <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>replit</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">    
+
+    <link href="../css/style.css" rel="stylesheet" type="text/css" />
+
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+  
+  </head>
+
+  <body>
+    <div class="header">
+      <h3>Controle de mercadorias retidas - Posto Fiscal dos Correios</h3>
+      <strong>Usuário: </strong>
+      <label id="user"></label>
+    </div>
+    
+    <div class="menu">
+      <ul class="nav justify-content-end">
+        <li class="nav-item">
+          <a class="btn btn-outline-primary btn-sm" href="../pages/registrar.html">Registrar </a>
         </li>
+        <li class="nav-item">
+          <a class="btn btn-outline-primary btn-sm" href="../pages/liberar.html">Liberar</a>
+        </li>
+        <li class="nav-item">
+          <a class="btn btn-outline-primary btn-sm" href="../pages/consultar.html">Consultar</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="btn btn-outline-primary btn-sm"href="../pages/relatorio.html">Relatórios</a>
+        </li>
+
+        <button class="btn btn-outline-danger btn-sm" type="button" onclick="sair()">Sair</button>
+        </li>
+      
+      </ul>
+    </div>
+
+    <div class="jumbotron text-center">
+      <div>
+        <div class="row g-0" style="padding:5em">
+          <div class="col-md-6">
+            <div class="card-body">
+              <H3>Ola! Bem vindo ao Controle de Retenção de Mercadorias</h3>
+              
+              <p class="card-text" style="text-align: left">Sistema de controle de mercadorias apreendidas em situação fiscal irregular no Posto Fiscal dos Correios. Nele é possível: cadastrar, liberar e consultar o status da retenção, bem como obter relatórios. </p>
+            </div>
+          </div>
+
+           <div class="col-md-6">
+            <img src="../img/app-correios.jpg" class="img-fluid rounded" alt="...">
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="../js/firebase.js"></script>    
+
+  </body>
+       </li>
         <li class="nav-item">
           <a class="nav-link" href="../pages/liberar.html">Liberar</a>
         </li>

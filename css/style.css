@@ -1,12 +1,46 @@
 body {
   font-family: Arial;
-  background: #f1f1f1;
+  background: #D3D3D3
 }
 
 /* Header/Blog Title */
 .header {
   padding: 30px;
   text-align: center;
-  background:#f1f1f1;
+  background:#8FBC8F;
 }
 
+.container{
+  background: #c0c0c0;
+  color: black;
+  border-radius: 5px;
+  padding: 2em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.menu{
+  background-color: rgb(102, 236, 102); 
+  padding:5px
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #DDD;
+}
+
+tr:hover {background-color: #D6EEEE;}
+
+#show_tabela{
+  background-color: #eee;
+  height: 500px;
+  border: 1px dotted black;
+  overflow: scroll;
+
+}

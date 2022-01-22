@@ -5,12 +5,9 @@
     <meta name="viewport" content="width=device-width">
     <title>replit</title>
     <link href="../css/style.css" rel="stylesheet" type="text/css" />
+
     <link 
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">  
-
-    <link href="../css/style.css" rel="stylesheet" type="text/css" />
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script> 
 
     <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
@@ -36,11 +33,9 @@
         <li class="nav-item">
           <a class="btn btn-outline-primary btn-sm"href="../pages/liberar.html">Liberar</a>
         </li>
-
         <li class="nav-item">
-          <a class="btn btn-outline-primary btn-sm"href="../pages/relatorio.html">Relatórios</a>
+          <a class="btn btn-outline-primary btn-sm" href="../pages/consultar.html">Consultar</a>
         </li>
-
 
         <li class="nav-item">
           <button class="btn btn-outline-danger btn-sm" type="button" onclick="sair()">Sair</button>
@@ -51,40 +46,50 @@
 
     <div class="container" style="margin-top: 2em">
       <div>
-        <h3>Consultar mercadorias</h3>
+        <h3>Geração de relatórios</h3>
       </div>
-     
-      <label>Insira o código de rastreamento dos correios</label>
-      <input id ='edt_consultar_cod' type="text" class="form-control" required></input> 
+
+      <label >Selecione o tipo de relatório:</label>
+       <select id="tipo_relatorio" class="form-select">
+        <option value="entrada">Mercadorias Retidas</option>
+        <option value="saida">Mercadorias Liberadas</option>
+        <option value="tudo">Todas as Categorias</option>
+      </select>
+      <hr/>
+      
+      <label>Início</label>
+      <input id="date_init" type="date">
+      <label>Fim:</label>
+      <input id="date_fim" type="date">
 
       <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-        <button id='consultar' class="btn btn-primary me-md-2" type="button" style="margin:10px" onclick="consultar()">Consultar</button>
-      </div> 
+        <button id='consultar' class="btn btn-primary me-md-2" type="button" style="margin:10px" onclick="gerarRelatorio()">Gerar Relatório</button>
+      </div>    
+       
+    </div>  
 
-      <div>
-        <strong id="result"></strong>
-        <p id="data"></p>
-        <p id="nf"></p>
-        <p id="tr"></p>
-        <p id="rs"></p>
-        <p id="status"></p>
-        <p id="data_liberacao"></p>
-        <p id="resp_entrada"></p>
-        <p id="resp_saida"></p>
-        <p id="loc"></p>
-        <button id="btnPrint" onclick="imprimirConsulta()" style="visibility:hidden" class="btn btn-outline-dark btn-sm">Imprimir</button>
-      </div>
+    <div class="container" style="background-color:white" id="show_tabela">
+      <table>
+      <tr>
+       <th>Código</th>
+       <th>Nº da NFe</th>
+       <th>Nº do TRDCD</th>
+       <th>Razão Social</th>
+       <th>Data da entrada</th>
+       <th>Data da saida</th>
+      </tr>  
+      <tbody id="tabela"></tbody>
+     </table>  
+    </div>
 
-      
-    </div>        
-  
+    
     <script src="../js/firebase.js"></script>
 
     <script>
       document.addEventListener("keypress", function(e) {
         if(e.key === 'Enter') {
     
-        var btn = document.querySelector("#consultar");
+        var btn = document.querySelector("#");
       
         btn.click();
     
