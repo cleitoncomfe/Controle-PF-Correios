@@ -124,7 +124,7 @@ function consultar(){
       let dt_l=document.getElementById('data_liberacao')
       let resp_entrada=document.getElementById("resp_entrada")
       let resp_saida=document.getElementById("resp_saida")
-      localizacao=document.getElementById("localizacao")
+      let localizacao=document.getElementById("loc")
 
       let cod=document.getElementById('edt_consultar_cod').value
       if(cod==""){
@@ -147,10 +147,10 @@ function consultar(){
         nf.innerHTML="Número da nota fiscal: "+ result.num_nf;
         tr.innerHTML="Número do TRDCD: "+result.num_tr;
         rs.innerHTML="Razão Social: "+result.r_social;
-        dt_l.innerHTML="Data da liberação: "+data_saida
-        resp_entrada.innerHTML="Responsável pelo cadastro: "+result.resp_entrada
-        resp_saida.innerHTML="Responsável pela saida: "+result.resp_saida
-        localizacao.innerHTML="Localização do pacote: estante: "+result.localizacao
+        dt_l.innerHTML="Data da liberação: "+data_saida;
+        resp_entrada.innerHTML="Responsável pelo cadastro: "+result.resp_entrada;
+        resp_saida.innerHTML="Responsável pela saida: "+result.resp_saida;
+        localizacao.innerHTML="Localização do pacote: estante: "+result.localizacao;
 
         if(result.status==true){
           status.innerHTML="Status da mercadoria: Retida"
