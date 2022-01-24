@@ -150,7 +150,7 @@ function consultar(){
         dt_l.innerHTML="Data da liberação: "+data_saida;
         resp_entrada.innerHTML="Responsável pelo cadastro: "+result.resp_entrada;
         resp_saida.innerHTML="Responsável pela saida: "+result.resp_saida;
-        localizacao.innerHTML="Localização do pacote: estante: "+result.localizacao;
+        localizacao.innerHTML="Localização do pacote: Estante: "+result.localizacao;
 
         if(result.status==true){
           status.innerHTML="Status da mercadoria: Retida"
