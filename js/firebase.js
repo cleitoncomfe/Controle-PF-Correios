@@ -292,6 +292,8 @@ function preencherTabela(tabela,i,data) {
   }else{
     cell5.innerHTML=(new Date(data.val().data_liberacao)).toLocaleString()
   }
+  let cel6=newRow.insertCell(6)
+  cel6.innerHTML=data.val().localizacao
   i++
 }
 
