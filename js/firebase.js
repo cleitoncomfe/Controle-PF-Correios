@@ -66,13 +66,9 @@ function cadastrar(){
       let cod=document.getElementById('edt_cod').value
       cod=cod.toLowerCase()
       let nf= document.getElementById('edt_nf').value
-      nf=encrypt(nf, "correios2021")
       let tr= document.getElementById('edt_tr').value
-      tr=encrypt(tr, "correios2021")
       let rs= document.getElementById('edt_rs').value
-      rs=encrypt(rs, "correios2021")
       let loc=document.getElementById("edt_loc").value
-      loc=encrypt(loc, "correios2021")
 
       if(cod=="" || nf=="" || tr=="" || rs=="" || loc==""){
         alert("Preencha todos os campos")
@@ -148,13 +144,13 @@ function consultar(){
         
         resultado.innerHTML="Resultado da consulta:"
         data.innerHTML="Data da retenção: "+data_entrada;
-        nf.innerHTML="Número da nota fiscal: "+ decrypt(result.num_nf, "correios2021");
-        tr.innerHTML="Número do TRDCD: "+decrypt(result.num_tr, "correios2021");
-        rs.innerHTML="Razão Social: "+decrypt(result.r_social, "correios2021");
+        nf.innerHTML="Número da nota fiscal: "+ result.num_nf;
+        tr.innerHTML="Número do TRDCD: "+result.num_tr;
+        rs.innerHTML="Razão Social: "+result.r_social;
         dt_l.innerHTML="Data da liberação: "+data_saida
         resp_entrada.innerHTML="Responsável pelo cadastro: "+result.resp_entrada
         resp_saida.innerHTML="Responsável pela saida: "+result.resp_saida
-        localizacao.innerHTML="Localização do pacote: estante: "+decrypt(result.localizacao,"correios2021")
+        localizacao.innerHTML="Localização do pacote: estante: "+result.localizacao
 
         if(result.status==true){
           status.innerHTML="Status da mercadoria: Retida"
