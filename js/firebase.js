@@ -52,7 +52,7 @@ function logar() {
 function sair(){
    auth.signOut()
   .then(function() {
-    window.location.href="/index.html"
+    window.location.href="https://cleitoncomfe.github.io/Controle-PF-Correios/index.html"
   }, function(error) {
     document.getElementById("console").innerHTML = JSON.stringify( error );
   });
