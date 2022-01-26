@@ -294,6 +294,10 @@ function preencherTabela(tabela,i,data) {
   }
   let cel6=newRow.insertCell(6)
   cel6.innerHTML=data.val().localizacao
+  let cel7=newRow.insertCell(7)
+  cel7.innerHTML=data.val().resp_entrada
+  let cel8=newRow.insertCell(8)
+  cel8.innerHTML=data.val().resp_saida
   i++
 }
 
